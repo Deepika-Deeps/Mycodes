@@ -1,9 +1,12 @@
 pipieline {
     agent any
-    environment {
+    {
+    environment
+    {
         USER_NAME ="Deepika"
         USER_ID = 644
-    } 
+    }
+    }
     stages{
         stage("Details") {
             steps{
