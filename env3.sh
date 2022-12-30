@@ -19,7 +19,7 @@ pipeline {
         }
         }
         stage('employee 3'){
-         steps {   sh "echo $USER_NAME"
+         steps {   sh "echo employee id 644"
         }
         }
     }
