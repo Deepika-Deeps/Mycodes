@@ -1,4 +1,6 @@
-parameters {
+pipeline {
+    agent any 
+    parameters {
   booleanParam description: 'is this is authorized employee', name: 'authorized'
   choice choices: ['name ', 'id ', 'organisation'], description: 'select the details', name: 'details'
   credentials credentialType: 'com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl', defaultValue: 'd5b846c5-ab03-4b14-81d7-554db2a8ee96', description: 'give the user name and password ', name: 'enter the values', required: false
@@ -6,9 +8,6 @@ parameters {
   password defaultValue: 'deepika', description: 'enter the password', name: 'password'
   run description: 'project is running', filter: 'ALL', name: 'run the project', projectName: 'env3 script'
 }
-
-pipeline {
-    agent any 
     environment {
         COMPANY_NAME = 'infinite'
     }
