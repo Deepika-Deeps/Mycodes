@@ -12,6 +12,16 @@ pipeline {
         COMPANY_NAME = 'infinite'
     }
     stages{
+        stage('hello'){
+            steps {
+                sh "echo authorized": ${params.'authorized'}
+                sh "echo details": ${params.'details'}
+                sh "echo enter the value":${params.'enter the values'}
+                sh "echo name":${params.name}
+                sh "echo password":${params.password}
+                sh "echo run th project":${params.'run the project'}
+            }
+        }
         stage('Employee1') {
             environment {
                 USER_NAME = 'deepika'
