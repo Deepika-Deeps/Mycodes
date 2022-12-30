@@ -2,12 +2,12 @@ pipieline {
     agent any
     environment
     {
-        USER_NAME ='Deepika'
+        USER_NAME ="Deepika"
     }
     stages{
-        stage('Details'){
+        stage("Details"){
             steps{
-                echo "employee Name is ${USER_NAME}"
+                echo "${USER_NAME}"
                 echo "employee id is 644 "
             }
         }
