@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage{'variales'} {
+        stage('variales') {
             steps {
                 sh 'env | sort '
             }
