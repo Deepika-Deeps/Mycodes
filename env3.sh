@@ -14,10 +14,13 @@ pipeline {
             }
         }
         stage('employee 2'){
-            sh "echo $COMPANY_NAME"
+            steps {
+                sh "echo $COMPANY_NAME"
+        }
         }
         stage('employee 3'){
-            sh "echo $USER_NAME"
+         steps {   sh "echo $USER_NAME"
+        }
         }
     }
 }
