@@ -1,8 +1,8 @@
 node{
-    stage(welcome){
+    stage(welcome) {
         echo "Hello"
     }
-    stage(program){
+    stage(program) {
         echo " this is first program "
     }
 }
