@@ -4,7 +4,7 @@ pipeline {
         stage('Git checkout stage')
         {
             steps {
-                git credrntialsId: 'github', ulr: 'https://github.com/valaxyTech/hello-worl.git'
+                git credentialsId: 'github', url: 'https://github.com/valaxyTech/hello-worl.git'
                 echo "git checkout is successfull...."
             }
         }
