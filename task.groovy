@@ -5,7 +5,9 @@ pipeline {
         {
             steps {
                 git credentialsId: 'github', url: 'https://github.com/valaxyTech/hello-worl.git'
-                echo "git checkout is successfull...."
+                 echo "git checkout is successfull...."
+                git clone https://github.com/valaxyTech/hello-worl.git
+                echo "pulled the code...."
             }
         }
         stage('Maven Built stage')
