@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        PATH = home/ubuntu/Downloads/META-INF:$PATH
+    }
     stages {
         stage('Git checkout stage')
         {
@@ -12,7 +15,7 @@ pipeline {
         {
             steps {
                 sh "mvn clean install"
-                echo " Maven is installed...."
+                
             }
         }
     }
