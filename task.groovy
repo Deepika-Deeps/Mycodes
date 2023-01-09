@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PATH = "home/ubuntu/Downloads/META-INF:$PATH"
+        PATH = "/usr/share/maven:$PATH"
     }
     stages {
         stage('Git checkout stage')
