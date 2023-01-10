@@ -14,7 +14,7 @@ pipeline {
         stage('Maven Built stage')
         {
             steps {
-                sh 'mvn -f var/lib/jenkins/workspace/devopstask/webapp/pom.xml clean install'
+                sh 'mvn var/lib/jenkins/workspace/devopstask/webapp/pom.xml clean install'
 
             }
                 
