@@ -3,6 +3,10 @@ pipeline {
     environment {
         PATH = "/usr/share/maven:$PATH"
     }
+    tools {
+        maven 'mavenHome'
+        jdk 'JavaHome'
+    }
     stages {
         stage('Git checkout stage')
         {
@@ -14,9 +18,15 @@ pipeline {
         stage('Maven Built stage')
         {
             steps {
-                sh "mvn clean install"
+                bat ' mvn -f webapp/pom.xml clean install'
+                post {
+                success {
+                    echo 'Now Archiving'
+                }
+            }
                 
             }
         }
+       
     }
 }
