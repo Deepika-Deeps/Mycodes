@@ -14,8 +14,7 @@ pipeline {
         stage('Maven Built stage')
         {
             steps {
-                sh " cd hello-world/tree/master/webapp"
-                sh "mvn clean install"
+                sh 'mvn -f helloworld/webapp/pom.xml clean install'
 
             }
                 
