@@ -25,7 +25,7 @@ pipeline {
                 steps
                 {
                 
-                    sh 'scp -r ${var/lib/jenkins/workspace/devopstask/webapp/target/webapp.war} ${/home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps}'
+                    sh 'scp -r var/lib/jenkins/workspace/devopstask/webapp/target/webapp.war /home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps '
 
                 }
             }
