@@ -25,13 +25,18 @@ pipeline {
                 steps
                 {
                     script {
-                   sh 'cd /'
-                    sh 'cd /var/lib/jenkins/workspace/devopstask/webapp/target/webapp.war'
-                    sh 'cd /'
-                    sh 'cp home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps'
+                   
+                    bat '''copy c:\\var\\lib\\jenkins\\workspace\\devopstask\\webapp\\target\\*.war F:\\Downloads\\apache-tomcat-9.0.70\\webapps\\'''
                     echo " war filed copied " 
                     
                     }
+                }
+            }
+            stage('restart tomcat stage')
+            {
+                steps 
+                {
+                    sh ' sudo servive restart '
                 }
             }
     }
