@@ -24,10 +24,8 @@ pipeline {
             {
                 steps
                 {
-                    sh '''#!/bin/bash 
-                    sh ' cd /'
-                    sh 'sudo cd /var/lib/jenkins/workspace/devopstask/webapp/target/webapp.war'
-                    sh 'cp /home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps '
+                    
+                    sh sudo 'cp /var/lib/jenkins/workspace/devopstask/webapp/target/webapp.war /home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps '
 
                 }
             }
