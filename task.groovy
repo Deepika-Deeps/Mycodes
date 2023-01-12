@@ -25,10 +25,10 @@ pipeline {
                 steps
                 {
                     script {
-                   sh 'cd /
-                     cd /var/lib/jenkins/workspace/devopstask/webapp/target/webapp.war
-                    cd /
-                    cp home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps
+                   sh 'cd /'
+                    sh 'cd /var/lib/jenkins/workspace/devopstask/webapp/target/webapp.war'
+                    sh 'cd /'
+                    sh 'cp home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps'
                     echo " war filed copied " 
                     
                     }
