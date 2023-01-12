@@ -24,7 +24,7 @@ pipeline {
             {
                 steps
                 {
-                    sh /var/lib/jenkins/workspace/devopstask/webapp/target/webapp.war
+                    sh cd '/var/lib/jenkins/workspace/devopstask/webapp/target/webapp.war'
                     
                      sh'cp /home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps '
 
