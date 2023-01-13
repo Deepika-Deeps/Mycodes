@@ -24,9 +24,7 @@ pipeline {
             {
                 steps
                 {
-                    sh cd '/var/lib/jenkins/workspace/devopstask/webapp/target/webapp.war'
-                    
-                     sh'cp /home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps '
+                    sh 'cp /var/lib/jenkins/workspace/devopstask/webapp/target/webapp.war /home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps '
 
                 }
             }
@@ -34,7 +32,7 @@ pipeline {
             {
                 steps 
                 {
-                    sh ' sudo servive restart '
+                    sh ' ./startup.sh '
                 }
             }
     }
