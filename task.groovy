@@ -33,7 +33,7 @@ pipeline {
             {
                 steps
                 {
-                       deploy adapters: [tomcat9(credentialsId: 'manger-gui', path: '', url: 'http://localhost:8081/')], contextPath: null, war: '**/*.war'
+                       deploy adapters: [tomcat9(credentialsId: 'admin-gui', path: '', url: 'http://localhost:8081/')], contextPath: null, war: '**/*.war'
 
                 }
             }
