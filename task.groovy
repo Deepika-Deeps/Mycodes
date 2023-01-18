@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools{
+        maven'Maven_local'
+    }
     environment {
         PATH = "/usr/share/maven:$PATH"
     }
@@ -18,13 +21,19 @@ pipeline {
                 sh  ' mvn  clean install'
 
             }
+            post{
+                success{
+                    echo"Archiving the Artifacts"
+                    archiveArtifacts artifacts:'**/target/*.war'
+                }
+            }
                 
             }
             stage('copy stage')
             {
                 steps
                 {
-                    sh 'cp /var/lib/jenkins/workspace/devopstask/webapp/target/webapp.war /home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps '
+                       deploy adapters: [tomcat9(credentialsId: 'manger-gui', path: '', url: 'http://localhost:8081/')], contextPath: null, war: '**/*.war'
 
                 }
             }
