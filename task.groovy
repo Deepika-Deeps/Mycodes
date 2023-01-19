@@ -43,7 +43,7 @@ pipeline {
             {
                 steps 
                 {
-                    sh ' ./startup.sh '
+                    sh 'cd /home/ubuntu/Downloads/apache-tomcat-9.0.70/bin/./startup.sh'
                 }
             }
     }
