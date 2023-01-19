@@ -33,8 +33,7 @@ pipeline {
             {
                 steps
                 {
-                       sh 'cd /var/lib/jenkins/workspace/devopstask/webapp/taget/**.war' 
-                       sh 'cp sudo/home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps'
+                       sh 'sudo cp/var/lib/jenkins/workspace/devopstask/webapp/taget/**.war'  /home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps'
 
                 }
             }
