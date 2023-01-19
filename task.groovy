@@ -42,7 +42,7 @@ pipeline {
             {
                 steps 
                 {
-                    sh 'sudo service restart apache-tomcat-9.0.70'
+                   pkill -9 -f tomcat && /home/ubuntu/Downloads/apache-tomcat-9.0.70/bin/startup.sh
                 }
             }
     }
