@@ -42,7 +42,7 @@ pipeline {
             {
                 steps 
                 {
-                    sh 'sudo service restart tomcat'
+                    sh 'pkill -9 -f apache-tomcat9.0.70 && <CATALINA-BASE>/bin/startup.sh'
                 }
             }
     }
