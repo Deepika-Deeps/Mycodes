@@ -33,7 +33,7 @@ pipeline {
             {
                 steps
                 {
-                       deploy adapters: [tomcat9(credentialsId: '1de694ae-9fab-491c-91ca-282b8ad26a0e', path: '', url: 'http://localhost:8081/')], contextPath: null, war: '**/*.war'
+                       sh 'cp var/lib/jenkins/workspace/devopstask/webapp/taget/**/.war home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps'
 
                 }
             }
