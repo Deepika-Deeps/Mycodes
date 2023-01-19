@@ -33,6 +33,8 @@ pipeline {
             {
                 steps
                 {
+                    sh 'sudo su jenkins'
+                    sh 'whoami'
                        sh 'sudo cp var/lib/jenkins/workspace/devopstask/webapp/taget/*.war /home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps'
 
                 }
