@@ -42,7 +42,7 @@ pipeline {
             {
                 steps 
                 {
-                   pkill -9 -f tomcat && /home/ubuntu/Downloads/apache-tomcat-9.0.70/bin/startup.sh
+                   pkill -9 -f apache-tomcat-9.0.70 && /home/ubuntu/Downloads/apache-tomcat-9.0.70/bin/startup.sh
                 }
             }
     }
