@@ -43,7 +43,7 @@ pipeline {
             {
                 steps 
                 {
-                    sh 'sudo cd /home/ubuntu/Downloads/apache-tomcat-9.0.70/bin/./startup.sh'
+                    sh 'sudo -D /home/ubuntu/Downloads/apache-tomcat-9.0.70/bin/./startup.sh'
                 }
             }
     }
