@@ -33,8 +33,10 @@ pipeline {
             {
                 steps
                 {
+                    script {
                     sh 'sudo su jenkins'
-                       sh 'sudo cp /var/lib/jenkins/workspace/devopstask/webapp/pom.xml /home/ubuntu/Downloads/apache-tomcat-9.0.70/webapps'
+                       sh 'sudo cp /var/lib/jenkins/workspace/devopstask/webapp/pom.xml /opt/tomcat/webapps'
+                    }
 
                 }
             }
@@ -42,7 +44,9 @@ pipeline {
             {
                 steps 
                 {
-                 sh '/opt/apache-tomcat9/bin/startup.sh /usr/bin/tomcatup'
+                    script{
+                 sh '/opt/tomcat/bin/./startup.sh'
+                    }
 
                 }
             }
