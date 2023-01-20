@@ -17,8 +17,9 @@ pipeline {
         stage('Maven Built stage')
         {
             steps {
-            
+            script {
                 sh  ' mvn  clean install'
+            }
 
             }
             post{
