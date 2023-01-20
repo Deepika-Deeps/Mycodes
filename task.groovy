@@ -45,7 +45,7 @@ pipeline {
                 steps 
                 {
                     script{
-                 sh '/opt/tomcat/bin/./startup.sh'
+                 sh 'sudo /opt/tomcat/bin/./startup.sh'
                     }
 
                 }
