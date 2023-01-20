@@ -36,7 +36,7 @@ pipeline {
                 {
                     script {
                     sh 'sudo su jenkins'
-                       sh 'sudo cp /var/lib/jenkins/workspace/devopstask/webapp/pom.xml /opt/tomcat9/webapps'
+                       sh 'sudo cp /var/lib/jenkins/workspace/devopstask@3/webapp/pom.xml  /opt/tomcat9/webapps'
                     }
 
                 }
