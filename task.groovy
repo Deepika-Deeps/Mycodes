@@ -46,6 +46,14 @@ pipeline {
 
                 }
             }
+            stage('cleanup stage')
+            {
+                steps{
+                    script{
+                        cleanWs()
+                    }
+                }
+            }
     }
 }  
                 
