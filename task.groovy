@@ -42,7 +42,7 @@ pipeline {
             {
                 steps 
                 {
-                 sh 'sudo /home/ubuntu/Downloads/apache-tomcat-9.0.70/bin/./startup.sh'
+                 sh 'pkill -9 -f tomcat && <CATALINA-BASE>/bin/startup.sh'
 
                 }
             }
